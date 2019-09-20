@@ -1,25 +1,25 @@
 [简体中文](./README.md)|English
 <div align="center">
-    <img src="https://github.com/Licoy/girls-reptile/blob/master/build/icons/256x256.png?raw=true" alt="">
-    <h1>GirlsReptile</h1>
-    <p>Based on electron-vue development, the Mito searcher supports custom acquisition source station configuration and is compatible with MacOS and Windows operating systems.</p>
-      <a href="https://travis-ci.org/Licoy/girls-reptile/builds">
-        <img src="https://img.shields.io/travis/Licoy/girls-reptile?style=flat-square" alt="">
+    <img src="https://github.com/Licoy/pic-gather/blob/master/build/icons/256x256.png?raw=true" alt="">
+    <h1>PicGather</h1>
+    <p>Image collector based on electron-vue, support custom acquisition source station configuration, compatible with MacOS and Windows operating system</p>
+      <a href="https://travis-ci.org/Licoy/pic-gather/builds">
+        <img src="https://img.shields.io/travis/Licoy/pic-gather?style=flat-square" alt="">
       </a>
         <a href="https://ci.appveyor.com/api/projects/status/yd6ksljlkrlmeucp/branch/master?svg=true">
             <img src="https://ci.appveyor.com/api/projects/status/yd6ksljlkrlmeucp?svg=true" alt="">
       </a>
-      <a href="https://github.com/Licoy/girls-reptile/releases">
-        <img src="https://img.shields.io/github/downloads/Licoy/girls-reptile/total.svg?style=flat-square" alt="">
+      <a href="https://github.com/Licoy/pic-gather/releases">
+        <img src="https://img.shields.io/github/downloads/Licoy/pic-gather/total.svg?style=flat-square" alt="">
       </a>
-      <a href="https://github.com/Licoy/girls-reptile/releases/latest">
-        <img src="https://img.shields.io/github/release/Licoy/girls-reptile.svg?style=flat-square" alt="">
+      <a href="https://github.com/Licoy/pic-gather/releases/latest">
+        <img src="https://img.shields.io/github/release/Licoy/pic-gather.svg?style=flat-square" alt="">
       </a>
-    <a href="https://github.com/Licoy/girls-reptile/issues">
-        <img src="https://img.shields.io/github/issues/Licoy/girls-reptile.svg" alt="">
+    <a href="https://github.com/Licoy/pic-gather/issues">
+        <img src="https://img.shields.io/github/issues/Licoy/pic-gather.svg" alt="">
       </a>
-    <a href="https://github.com/Licoy/girls-reptile/pulls">
-        <img src="https://img.shields.io/github/issues-pr/Licoy/girls-reptile.svg" alt="">
+    <a href="https://github.com/Licoy/pic-gather/pulls">
+        <img src="https://img.shields.io/github/issues-pr/Licoy/pic-gather.svg" alt="">
       </a>
     <a href="https://github.com/Licoy">
         <img src="https://img.shields.io/badge/author-Licoy-ff69b4.svg" alt="">
@@ -27,18 +27,21 @@
 </div>
 
 ## Application introduction
-GirlsReptile is based on electron-vue developed Mito searcher, supports custom acquisition source station configuration, compatible with MacOS and Windows operating system
+PicGather is an image collector based on electron-vue, which supports custom acquisition source configuration and is compatible with MacOS and Windows operating systems.
 ## Download and install
-You can download and install here by [clicking here](https://github.com/Licoy/girls-reptile/releases), support Mac/Windows/Linux (not tested)
+You can download and install here by [clicking here](https://github.com/Licoy/pic-gather/releases), support Mac/Windows/Linux (not tested)
 ## Development toss
 - [《关于在travis-ci以及appveyor条件构建遇到的坑》](https://www.licoy.cn/3385.html)
 ## Officially adapted source station
+- [彼岸图网](http://pic.netbian.com)
+- [秀色女神](https://www.xsnvshen.com)
+- [nlegs(需挂代理)](http://www.nlegs.com)
 - [全图网](http://www.quantuwang.co/)
 - [美图录](https://www.meitulu.com)
 - [7106图片大全](https://www.7160.com/)
 ## Acquisition instructions
-- [Do you have a better URL? Click me to submit with official support](https://github.com/Licoy/girls-reptile/issues/new)
-- [Can't I meet my needs, can I write my own collection source? Of course, point me to view the document.](https://github.com/Licoy/girls-reptile/wiki/reptile-source-rules)
+- [Do you have a better URL? Click me to submit with official support](https://github.com/Licoy/pic-gather/issues/new)
+- [Can't I meet my needs, can I write my own collection source? Of course, point me to view the document.](https://github.com/Licoy/pic-gather/wiki/reptile-source-rules)
 ## Use screenshots (V2.0.0 version, please refer to the latest version)
 ### Mac
 ![mac](./docs/image/mac-1-2.0.0.png)

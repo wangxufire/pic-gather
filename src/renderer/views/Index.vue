@@ -4,7 +4,7 @@
             <div class="title-menu">
                 <Dropdown trigger='click' @on-click='onTitleMenuClick'>
                     <a href="javascript:void(0)">
-                        GirlsReptile - {{ version }}
+                        PicGather - {{ version }}
                         <Icon type="ios-arrow-down"></Icon>
                     </a>
                     <DropdownMenu slot="list">
@@ -92,16 +92,16 @@
             </div>
         </div>
         <Modal title="关于我们" v-model="showAbout">
-            <p class="fs14">软件名称：GirlsReptile</p>
-            <p class="fs14">项目主页：<a @click="openUrl('https://github.com/Licoy/girls-reptile')">https://github.com/Licoy/girls-reptile</a></p>
+            <p class="fs14">软件名称：PicGather</p>
+            <p class="fs14">项目主页：<a @click="openUrl('https://github.com/Licoy/pic-gather')">https://github.com/Licoy/pic-gather</a></p>
             <p class="fs14">使用声明：此项目仅供学习交流使用，请勿使用于商业及非法用途，具体条款请参见于项目主页。</p>
         </Modal>
         <Modal title="采集源设置" v-model="setting.show" width="700px" :mask-closable='false' :closable='false'>
-            <p style="font-size:12px">官方采集源：<a @click="openUrl('https://raw.githubusercontent.com/Licoy/girls-reptile/master/reptile-source.json')"
-                >https://raw.githubusercontent.com/Licoy/girls-reptile/master/reptile-source.json</a></p>
+            <p style="font-size:12px">官方采集源：<a @click="openUrl('https://raw.githubusercontent.com/Licoy/pic-gather/master/reptile-source.json')"
+                >https://raw.githubusercontent.com/Licoy/pic-gather/master/reptile-source.json</a></p>
             <br>
-            <p style="font-size:12px">采集源规则：<a @click="openUrl('https://github.com/Licoy/girls-reptile/wiki/reptile-source-rules')"
-            >https://github.com/Licoy/girls-reptile/wiki/reptile-source-rules</a></p>
+            <p style="font-size:12px">采集源规则：<a @click="openUrl('https://github.com/Licoy/pic-gather/wiki/reptile-source-rules')"
+            >https://github.com/Licoy/pic-gather/wiki/reptile-source-rules</a></p>
             <br>
             <p style="font-size:12px">支持版本号：{{$reptileVersion}}（向下兼容）</p>
             <Divider />
@@ -286,14 +286,14 @@ export default {
                 });
             }
             try {
-                let res = await this.$http.get('https://api.github.com/repos/Licoy/girls-reptile/releases/latest')
+                let res = await this.$http.get('https://api.github.com/repos/Licoy/pic-gather/releases/latest')
                 if(compareVersion2Update('v'+this.version,res.data.tag_name)){
                     load()
                     this.$Modal.confirm({
                         title: '提示',
                         content: '<p>检测到有新的版本'+res.data.tag_name+'，是否立即前往更新？</p>',
                         onOk: () => {
-                            this.openUrl('https://github.com/Licoy/girls-reptile/releases')
+                            this.openUrl('https://github.com/Licoy/pic-gather/releases')
                         }
                     });
                 }else{
