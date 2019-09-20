@@ -11,7 +11,7 @@ export default {
         }
         let url = mode.tags[tagIndex].url
         try {
-            let goUrl = page==1 ? url : this.getNextPage(url, mode.pages.nextPageUrlMode)
+            let goUrl = page==1 ? url : this.getModeReplaceOrAddVal(url, mode.pages.nextPageUrlMode)
             console.log(`开始采集第${page}页：${goUrl}`)
             let res = await get(goUrl,null,{page:page})
             let $ = cheerio.load(res.data)
@@ -59,13 +59,15 @@ export default {
             const urlNeedMerge = mode.imgs.urlNeedMerge ? mode.imgs.urlNeedMerge : false
             let incrementMode = mode.imgs.nextPageUrlMode.incrementMode ? mode.imgs.nextPageUrlMode.incrementMode : 'page'
             let imageSuffix = mode.imgs.nextPageUrlMode.imageSuffix ? mode.imgs.nextPageUrlMode.imageSuffix : 'jpg'
-            let goUrl = page==1 ? imgItem.url : this.getNextPage(imgItem.url, mode.imgs.nextPageUrlMode)
+            let goUrl = page==1 ? imgItem.url : this.getModeReplaceOrAddVal(imgItem.url, mode.imgs.nextPageUrlMode)
             const referer = sf(goUrl, {page:page})
             let res = await get(goUrl,null,{page:page})
             let $ = cheerio.load(res.data)
-            if(!pageTotal){
+            if(!pageTotal && !singlePage){
                 pageTotal = this.getLastPage($, mode.imgs.lastPage)
             }
+            //如果是单页则重置页码总数
+            pageTotal = singlePage ? -1 : pageTotal;
             let images = $(mode.imgs.element)
             if(images && images.length>0){
                 const imageAttr = mode.imgs.attr ? mode.imgs.attr : 'src'
@@ -80,6 +82,9 @@ export default {
                         if(urlNeedMerge){
                             currentLink = mode.url + currentLink
                         }
+                        if(mode.imgs.imgUrlMode){
+                            currentLink = this.getModeReplaceOrAddVal(currentLink, mode.imgs.imgUrlMode)
+                        }
                         ipcRenderer.send("download-button", {url:currentLink,name:imgItem.name,headers:[
                             {name:"Referer", value: referer},
                         ]})
@@ -90,6 +95,9 @@ export default {
                         let link = this.getAttr($(element),imageAttr)
                         if(urlNeedMerge){
                             link = mode.url + link
+                        }
+                        if(mode.imgs.imgUrlMode){
+                            link = this.getModeReplaceOrAddVal(link, mode.imgs.imgUrlMode)
                         }
                         ipcRenderer.send("download-button", {url:link,name:imgItem.name,headers:[
                             {name:"Referer", value: referer},
@@ -157,10 +165,10 @@ export default {
         }
         return pageTotal;
     },
-    getNextPage(url, nextPageUrlMode){
-        if(nextPageUrlMode.mode=='replace'){
-            return url.replace(nextPageUrlMode.replaceSearchValue, nextPageUrlMode.replaceValue)
+    getModeReplaceOrAddVal(url, mode){
+        if(mode.mode=='replace'){
+            return url.replace(mode.replaceSearchValue, mode.replaceValue)
         }
-        return url + nextPageUrlMode.addValue
+        return url + mode.addValue
     }
 }
