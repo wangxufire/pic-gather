@@ -1,6 +1,6 @@
 简体中文|[English](./README_EN.md)
 <div align="center">
-    <img src="https://github.com/Licoy/pic-gather/blob/master/build/icons/256x256.png?raw=true" alt="">
+    <img src="./build/icons/256x256.png" alt="">
     <h1>PicGather</h1>
     <p>基于electron-vue开发的图片采集器，支持自定义采集源站配置，兼容MacOS与Windows操作系统</p>
       <a href="https://travis-ci.org/Licoy/pic-gather/builds">
