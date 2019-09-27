@@ -78,11 +78,11 @@
                 "addValue": ""
             }, 
             "lastPage": {
-                "element": ".pagination a.visible-xs", 
+                "element": ".pagination a", 
                 "minPageLength": 2, 
                 "attr": "@text", 
-                "descIndex": 2, 
-                "isNeedSplit": true, 
+                "descIndex": 3, 
+                "isNeedSplit": false, 
                 "splits": [{"str":"/","index":1}]
             }
         }, 
