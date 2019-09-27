@@ -88,15 +88,16 @@
         }, 
         "imgs": {
             "element": ".content img", 
-            "urlNeedMerge": true,
-            "singlePage":true,
-            "nextPageUrlMode": {
-                "incrementMode": "page",
-                "mode": "add", 
-                "addValue": ""
-            }, 
-            "lastPage": {
-                "element": ".pagination a"
+            "attr":"data-original",
+            "singlePage": true,
+            "imgUrlMode":{
+                "mode":"replace",
+                "addValue": "",
+                "replaceSearchValue": "//", 
+                "replaceValue": "http://"
+            },
+            "nextPageUrlMode": { 
+                "incrementMode": "page"
             }
         }, 
         "supportReptileVersion": 2
