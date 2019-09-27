@@ -89,16 +89,10 @@
         "imgs": {
             "element": ".content img", 
             "attr":"data-original",
-            "singlePage": true,
-            "imgUrlMode":{
-                "mode":"replace",
-                "addValue": "",
-                "replaceSearchValue": "//", 
-                "replaceValue": "http://"
-            },
             "nextPageUrlMode": { 
                 "incrementMode": "page"
             }
+        }
         }, 
         "supportReptileVersion": 2
     },
