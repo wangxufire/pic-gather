@@ -60,7 +60,13 @@
         "key":"maomi",
         "url": "https://www.69aun.com", 
         "tags": [
-            {"name": "亚洲色图", "url": "https://www.69aun.com/tupian/list-亚洲色图-{page}.html"}
+            {"name": "亚洲色图", "url": "https://www.69aun.com/tupian/list-亚洲色图-{page}.html"}, 
+            {"name": "自拍偷拍", "url": "https://www.69aun.com/tupian/list-自拍偷拍-{page}.html"}, 
+            {"name": "欧美色图", "url": "https://www.69aun.com/tupian/list-欧美色图-{page}.html"}, 
+            {"name": "美腿丝袜", "url": "https://www.69aun.com/tupian/list-美腿丝袜-{page}.html"}, 
+            {"name": "清纯唯美", "url": "https://www.69aun.com/tupian/list-清纯唯美-{page}.html"}, 
+            {"name": "乱伦熟女", "url": "https://www.69aun.com/tupian/list-乱伦熟女-{page}.html"}, 
+            {"name": "卡通动漫", "url": "https://www.69aun.com/tupian/list-卡通动漫-{page}.html"}
         ], 
         "pages": {
             "element": "#tpl-img-content li", 
