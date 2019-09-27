@@ -92,7 +92,6 @@
             "nextPageUrlMode": { 
                 "incrementMode": "page"
             }
-        }
         }, 
         "supportReptileVersion": 2
     },
