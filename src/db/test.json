@@ -81,7 +81,7 @@
                 "element": ".pagination a", 
                 "minPageLength": 2, 
                 "attr": "@text", 
-                "descIndex": 3, 
+                "descIndex": 4, 
                 "isNeedSplit": false, 
                 "splits": [{"str":"/","index":1}]
             }
@@ -89,6 +89,7 @@
         "imgs": {
             "element": ".content img", 
             "attr":"data-original",
+            "singlePage": true,
             "nextPageUrlMode": { 
                 "incrementMode": "page"
             }
