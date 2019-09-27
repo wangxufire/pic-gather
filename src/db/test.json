@@ -60,7 +60,7 @@
         "key":"maomi",
         "url": "https://www.69aun.com/tupian", 
         "tags": [
-            {"name": "亚洲色图", "url": "https://www.69aun.com/tupian/list-亚洲色图"}
+            {"name": "亚洲色图", "url": "https://www.69aun.com/tupian/list-亚洲色图-{page}.html"}
         ], 
         "pages": {
             "element": "#tpl-img-content li", 
@@ -75,7 +75,7 @@
             },
             "nextPageUrlMode": {
                 "mode": "add", 
-                "addValue": "-{page}.html"
+                "addValue": ""
             }, 
             "lastPage": {
                 "element": ".pagination a", 
